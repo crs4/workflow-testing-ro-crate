@@ -1,6 +1,6 @@
 # Workflow Testing RO-Crate
 
-Workflow Testing RO-Crate is a specialization of [Workflow RO-Crate](https://about.workflowhub.eu/Workflow-RO-Crate/1.0/) that supports additional metadata related to the testing of computational workflows. [LifeMonitor](https://crs4.github.io/life_monitor/) uses Workflow Testing RO-Crate as an exchange format that allows RO-Crate authors to describe test suites associated with workflows.
+Workflow Testing RO-Crate is a specialization of [Workflow RO-Crate](https://w3id.org/workflowhub/workflow-ro-crate/1.0) that supports additional metadata related to the testing of computational workflows. [LifeMonitor](https://crs4.github.io/life_monitor/) uses Workflow Testing RO-Crate as an exchange format that allows RO-Crate authors to describe test suites associated with workflows.
 
 
 ## Introduction
@@ -21,7 +21,7 @@ Workflow Testing RO-Crate extends the [RO-Crate 1.1 context](https://www.researc
 ],
 ```
 
-A Workflow Testing RO-Crate MUST be a valid [Workflow RO-Crate](https://about.workflowhub.eu/Workflow-RO-Crate/1.0/) (e.g., it has to contain a *Main Workflow*). In addition, it MUST refer to one or more [test suites](#test-suite) from the [root data entity](https://www.researchobject.org/ro-crate/1.1/root-data-entity.html) via the `mentions` property:
+A Workflow Testing RO-Crate MUST be a valid [Workflow RO-Crate](https://w3id.org/workflowhub/workflow-ro-crate/1.0) (e.g., it has to contain a *Main Workflow*). In addition, it MUST refer to one or more [test suites](#test-suite) from the [root data entity](https://www.researchobject.org/ro-crate/1.1/root-data-entity.html) via the `mentions` property:
 
 ```json
 {
@@ -75,7 +75,7 @@ For information on the exact format supported by LifeMonitor, see [LifeMonitor-s
 
 ### Test service
 
-A _test service_ is a software service where tests can be run. It is represented by a context entity of type `TestService`:
+A _test service_ is a software service where tests can be run. It is represented by a contextual entity of type `TestService`:
 
 ```json
 {
@@ -91,7 +91,7 @@ For information on the test services supported by LifeMonitor, see [LifeMonitor-
 
 ### Test definition
 
-A _Test definition_ is a file that describes how to run a [test suite](#test-suite). Each test definition is represented by a data entity whose type MUST include `TestDefinition` and  `File`. A test definition MUST refer to the [test engine](#test-engine) it is written for via `conformsTo` and to the engine's version via `engineVersion`:
+A _Test definition_ is a file that describes how to run a [test suite](#test-suite). In the RO-Crate metadata, it is represented by a [data entity](https://www.researchobject.org/ro-crate/specification/1.1/data-entities) whose type MUST include `TestDefinition` and  `File`. A test definition MUST refer to the [test engine](#test-engine) it is written for via `conformsTo` and to the engine's version via `engineVersion`:
 
 ```json
 {
