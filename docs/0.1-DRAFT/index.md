@@ -12,7 +12,7 @@ LifeMonitor monitors the execution of workflow test **suites** on one or more Co
 
 This section uses terminology from the [RO-Crate 1.1 specification](https://w3id.org/ro/crate/1.1).
 
-Workflow Testing RO-Crate extends the [RO-Crate 1.1 context](https://www.researchobject.org/ro-crate/1.1/context.jsonld) with types and properties defined in the [test RO-Terms vocabulary](https://github.com/ResearchObject/ro-terms/blob/master/test/vocabulary.csv). To add mappings for these terms to your RO-Crate, specify your `@context` as follows:
+Workflow Testing RO-Crate extends the [RO-Crate 1.1 context](https://www.researchobject.org/ro-crate/1.1/context.jsonld) with types and properties defined in the [test RO-Terms vocabulary](https://github.com/ResearchObject/ro-terms/blob/master/test/vocabulary.csv). To add mappings for these terms to an RO-Crate, specify the `@context` as follows:
 
 ```json
 "@context": [
@@ -164,7 +164,7 @@ In the case of GitHub Actions, `url` must be set to `"https://api.github.com"`, 
 repos/<OWNER>/<REPO NAME>/actions/workflows/<YAML FILE NAME>
 ```
 
-For instance, the [fair-crcc-send-data](https://github.com/crs4/fair-crcc-send-data) repository has a GitHub Actions workflow, `.github/workflows/main.yml`, that runs tests for the scientific workflow hosted in the repository. To have the test runs monitored by LifeMonitor, the `TestInstance` entry needs to be set up as follows:
+For instance, [fair-crcc-send-data](https://github.com/crs4/fair-crcc-send-data) has a GitHub Actions workflow, `.github/workflows/main.yml`, that runs tests for the scientific workflow hosted in the repository. To have the test runs monitored by LifeMonitor, the `TestInstance` entry needs to be set up as follows:
 
 ```json
 {
