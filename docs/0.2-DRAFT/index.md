@@ -210,6 +210,10 @@ For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `gi
         {
             "@id": "./",
             "@type": "Dataset",
+            "conformsTo": [
+                {"@id": "https://w3id.org/ro/wftest/0.2-DRAFT"},
+                {"@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1"}
+            ],
             "name": "sort-and-change-case",
             "description": "sort lines and change text to upper case",
             "license": "Apache-2.0",
@@ -235,6 +239,18 @@ For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `gi
                     "@id": "#test1"
                 }
             ]
+        },
+        {
+            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT",
+            "@type": ["CreativeWork", "Profile"],
+            "name": "Workflow Testing RO-Crate",
+            "version": "0.2-DRAFT"
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1",
+            "@type": ["CreativeWork", "Profile"],
+            "name": "Workflow RO-Crate",
+            "version": "1.1"
         },
         {
             "@id": "sort-and-change-case.ga",
