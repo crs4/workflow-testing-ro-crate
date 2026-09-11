@@ -188,7 +188,10 @@ For instance, [fair-crcc-send-data](https://github.com/crs4/fair-crcc-send-data)
 For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `github/<OWNER>/<REPO NAME>` or `repo/<REPO ID>`. For Jenkins builds, set `url` to the base URL of the Jenkins instance (e.g., `"https://jenkins.example.org"`) and `resource` to the project's relative URL (e.g., `"job/my_tests"`).
 
 
-## Example
+## Example Metadata File (`ro-crate-metadata.json`)
+
+* [ro-crate-metadata.json](example/ro-crate-metadata.json)
+* [ro-crate-preview.html](example/ro-crate-preview.html)
 
 ```json
 {
