@@ -217,6 +217,7 @@ For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `gi
             "name": "sort-and-change-case",
             "description": "sort lines and change text to upper case",
             "license": "Apache-2.0",
+            "datePublished": "2026-09-11",
             "mainEntity": {
                 "@id": "sort-and-change-case.ga"
             },
@@ -281,7 +282,8 @@ For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `gi
             },
             "url": {
                 "@id": "https://galaxyproject.org/"
-            }
+            },
+            "version": "26.1.2.dev0"
         },
         {
             "@id": "#test1",
@@ -322,7 +324,8 @@ For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `gi
             "@id": "https://w3id.org/ro/terms/test#PlanemoEngine",
             "@type": "SoftwareApplication",
             "name": "Planemo",
-            "url": {"@id": "https://github.com/galaxyproject/planemo"}
+            "url": {"@id": "https://github.com/galaxyproject/planemo"},
+            "version": "0.70"
         }
     ]
 }
