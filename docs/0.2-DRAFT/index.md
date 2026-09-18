@@ -1,8 +1,14 @@
+---
+title: Workflow Testing RO-Crate
+---
+
 # Workflow Testing RO-Crate
 
-Version: 0.2-DRAFT
+* Version: 0.2-DRAFT
+* Permalink: https://w3id.org/ro/wftest/0.2-DRAFT
+* Authors: Simone Leo, Marco Enrico Piras, Luca Pireddu
 
-Workflow Testing RO-Crate is a specialization of [Workflow RO-Crate](https://w3id.org/workflowhub/workflow-ro-crate/1.0) that supports additional metadata related to the testing of computational workflows. [LifeMonitor](https://crs4.github.io/life_monitor/) uses Workflow Testing RO-Crate as an exchange format that allows RO-Crate authors to describe test suites associated with workflows.
+Workflow Testing RO-Crate is a specialization of [Workflow RO-Crate](https://w3id.org/workflowhub/workflow-ro-crate/1.1) that supports additional metadata related to the testing of computational workflows. [LifeMonitor](https://crs4.github.io/life_monitor/) uses Workflow Testing RO-Crate as an exchange format that allows RO-Crate authors to describe test suites associated with workflows.
 
 
 ## Introduction
@@ -12,18 +18,18 @@ LifeMonitor monitors the execution of workflow test **suites** on one or more Co
 
 ## Concepts
 
-This section uses terminology from the [RO-Crate 1.1 specification](https://w3id.org/ro/crate/1.1).
+This section uses terminology from the [RO-Crate 1.3 specification](https://w3id.org/ro/crate/1.3).
 
-Workflow Testing RO-Crate extends the [RO-Crate 1.1 context](https://www.researchobject.org/ro-crate/1.1/context.jsonld) with types and properties defined in the [test RO-Terms vocabulary](https://github.com/ResearchObject/ro-terms/blob/master/test/vocabulary.csv). To add mappings for these terms to an RO-Crate, specify the `@context` as follows:
+Workflow Testing RO-Crate extends the [RO-Crate 1.3 context](https://w3id.org/ro/crate/1.3/context) with types and properties defined in the [test RO-Terms vocabulary](https://github.com/ResearchObject/ro-terms/blob/master/test/vocabulary.csv). To add mappings for these terms to an RO-Crate, specify the `@context` as follows:
 
 ```json
 "@context": [
-    "https://w3id.org/ro/crate/1.1/context",
+    "https://w3id.org/ro/crate/1.3/context",
     "https://w3id.org/ro/terms/test"
 ],
 ```
 
-A Workflow Testing RO-Crate MUST be a valid [Workflow RO-Crate](https://w3id.org/workflowhub/workflow-ro-crate/1.0) (e.g., it has to contain a *Main Workflow*). In addition, it MUST refer to one or more [test suites](#test-suite) from the [root data entity](https://www.researchobject.org/ro-crate/1.1/root-data-entity.html) via the `mentions` property:
+A Workflow Testing RO-Crate MUST be a valid [Workflow RO-Crate](https://w3id.org/workflowhub/workflow-ro-crate/1.1) (e.g., it has to contain a *Main Workflow*). In addition, it MUST refer to one or more [test suites](#test-suite) from the [root data entity](https://www.researchobject.org/ro-crate/specification/1.3/root-data-entity.html) via the `mentions` property:
 
 ```json
 {
@@ -93,7 +99,7 @@ For information on the test services supported by LifeMonitor, see [LifeMonitor-
 
 ### Test definition
 
-A _Test definition_ is a file that describes how to run a [test suite](#test-suite). In the RO-Crate metadata, it is represented by a [data entity](https://www.researchobject.org/ro-crate/specification/1.1/data-entities) whose type MUST include `TestDefinition` and  `File`. A test definition MUST refer to the [test engine](#test-engine) it is written for via `conformsTo` and to the engine's version via `engineVersion`:
+A _Test definition_ is a file that describes how to run a [test suite](#test-suite). In the RO-Crate metadata, it is represented by a [data entity](https://www.researchobject.org/ro-crate/specification/1.3/data-entities) whose type MUST include `TestDefinition` and  `File`. A test definition MUST refer to the [test engine](#test-engine) it is written for via `conformsTo` and to the engine's version via `engineVersion`:
 
 ```json
 {
@@ -182,12 +188,15 @@ For instance, [fair-crcc-send-data](https://github.com/crs4/fair-crcc-send-data)
 For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `github/<OWNER>/<REPO NAME>` or `repo/<REPO ID>`. For Jenkins builds, set `url` to the base URL of the Jenkins instance (e.g., `"https://jenkins.example.org"`) and `resource` to the project's relative URL (e.g., `"job/my_tests"`).
 
 
-## Example
+## Example Metadata File (`ro-crate-metadata.json`)
+
+* [ro-crate-metadata.json](example/ro-crate-metadata.json)
+* [ro-crate-preview.html](example/ro-crate-preview.html)
 
 ```json
 {
     "@context": [
-        "https://w3id.org/ro/crate/1.1/context",
+        "https://w3id.org/ro/crate/1.3/context",
         "https://w3id.org/ro/terms/test"
     ],
     "@graph": [
@@ -198,15 +207,20 @@ For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `gi
                 "@id": "./"
             },
             "conformsTo": {
-                "@id": "https://w3id.org/ro/crate/1.1"
+                "@id": "https://w3id.org/ro/crate/1.3"
             }
         },
         {
             "@id": "./",
             "@type": "Dataset",
+            "conformsTo": [
+                {"@id": "https://w3id.org/ro/wftest/0.2-DRAFT"},
+                {"@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1"}
+            ],
             "name": "sort-and-change-case",
             "description": "sort lines and change text to upper case",
             "license": "Apache-2.0",
+            "datePublished": "2026-09-11",
             "mainEntity": {
                 "@id": "sort-and-change-case.ga"
             },
@@ -229,6 +243,18 @@ For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `gi
                     "@id": "#test1"
                 }
             ]
+        },
+        {
+            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT",
+            "@type": ["CreativeWork", "Profile"],
+            "name": "Workflow Testing RO-Crate",
+            "version": "0.2-DRAFT"
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1",
+            "@type": ["CreativeWork", "Profile"],
+            "name": "Workflow RO-Crate",
+            "version": "1.1"
         },
         {
             "@id": "sort-and-change-case.ga",
@@ -259,7 +285,8 @@ For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `gi
             },
             "url": {
                 "@id": "https://galaxyproject.org/"
-            }
+            },
+            "version": "26.1.2.dev0"
         },
         {
             "@id": "#test1",
@@ -300,7 +327,8 @@ For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `gi
             "@id": "https://w3id.org/ro/terms/test#PlanemoEngine",
             "@type": "SoftwareApplication",
             "name": "Planemo",
-            "url": {"@id": "https://github.com/galaxyproject/planemo"}
+            "url": {"@id": "https://github.com/galaxyproject/planemo"},
+            "version": "0.70"
         }
     ]
 }

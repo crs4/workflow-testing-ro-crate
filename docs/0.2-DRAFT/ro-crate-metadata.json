@@ -1,0 +1,201 @@
+{
+    "@context": "https://w3id.org/ro/crate/1.3/context",
+    "@graph": [
+        {
+            "@id": "ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "conformsTo": {
+                "@id": "https://w3id.org/ro/crate/1.3"
+            },
+            "about": {
+                "@id": "https://w3id.org/ro/wftest/0.2-DRAFT"
+            }
+        },
+        {
+            "@id": "ro-crate-preview.html",
+            "@type": "CreativeWork",
+            "isBasedOn": {
+                "@id": "ro-crate-metadata.json"
+            },
+            "name": "HTML preview of the Workflow Testing RO-Crate profile",
+            "encodingFormat": "text/html",
+            "about": {
+                "@id": "https://w3id.org/ro/wftest/0.2-DRAFT"
+            }
+        },
+        {
+            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT",
+            "@type": [
+                "Dataset",
+                "Profile"
+            ],
+            "isProfileOf": [
+                {
+                    "@id": "https://w3id.org/ro/crate/1.3"
+                }
+            ],
+            "identifier": "https://w3id.org/ro/wftest/0.2-DRAFT",
+            "name": "Workflow Testing RO-Crate profile",
+            "description": "This profile is a specialization of Workflow RO-Crate that supports additional metadata related to the testing of computational workflows.",
+            "version": "0.2-DRAFT",
+            "datePublished": "2026-09-11",
+            "license": {
+                "@id": "https://spdx.org/licenses/MIT"
+            },
+            "author": [
+                {
+                    "@id": "https://orcid.org/0000-0001-8271-5429"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-5207-0030"
+                },
+                {
+                    "@id": "https://orcid.org/0000-0002-4663-5613"
+                }
+            ],
+            "hasPart": [
+                {
+                    "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/index.html"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/"
+                },
+                {
+                    "@id": "https://w3id.org/ro/terms/test"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1"
+                }
+            ],
+            "hasResource": [
+                {
+                    "@id": "#hasSpecification"
+                },
+                {
+                    "@id": "#hasExample"
+                },
+                {
+                    "@id": "#mustConformToWorkflowROCrate"
+                }
+            ]
+        },
+        {
+            "@id": "https://spdx.org/licenses/MIT",
+            "@type": "CreativeWork",
+            "name": "MIT License",
+            "identifier": {
+                "@id": "https://spdx.org/licenses/MIT"
+            }
+        },
+        {
+            "@id": "https://orcid.org/0000-0001-8271-5429",
+            "@type": "Person",
+            "name": "Simone Leo"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-5207-0030",
+            "@type": "Person",
+            "name": "Marco Enrico Piras"
+        },
+        {
+            "@id": "https://orcid.org/0000-0002-4663-5613",
+            "@type": "Person",
+            "name": "Luca Pireddu"
+        },
+        {
+            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/index.html",
+            "@type": "File",
+            "name": "Workflow Testing RO-Crate (HTML)",
+            "encodingFormat": [
+                "text/html",
+                {
+                    "@id": "https://www.nationalarchives.gov.uk/PRONOM/fmt/471"
+                }
+            ]
+        },
+        {
+            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/",
+            "@type": "Dataset",
+            "name": "Example Workflow Testing RO-Crate",
+            "conformsTo": [
+                {
+                    "@id": "https://w3id.org/ro/crate"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wftest/0.2-DRAFT"
+                },
+                {
+                    "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1"
+                }
+            ],
+            "subjectOf": [
+                {
+                    "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/ro-crate-metadata.json"
+                },
+                {
+                    "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/ro-crate-preview.html"
+                }
+            ]
+        },
+        {
+            "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1",
+            "@type": [
+                "CreativeWork",
+                "Profile"
+            ],
+            "name": "Workflow RO-Crate profile",
+            "version": "1.1"
+        },
+        {
+            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/ro-crate-metadata.json",
+            "@type": "CreativeWork",
+            "encodingFormat": "application/ld+json"
+        },
+        {
+            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/ro-crate-preview.html",
+            "@type": "CreativeWork",
+            "encodingFormat": "text/html"
+        },
+        {
+            "@id": "https://w3id.org/ro/terms/test",
+            "@type": "File",
+            "name": "Workflow testing terms",
+            "contentUrl": "https://www.researchobject.org/ro-terms/test/context.json",
+            "conformsTo": {
+                "@id": "http://www.w3.org/ns/json-ld#Context"
+            },
+            "encodingFormat": "application/ld+json"
+        },
+        {
+            "@id": "#hasSpecification",
+            "@type": "ResourceDescriptor",
+            "hasRole": {
+                "@id": "http://www.w3.org/ns/dx/prof/role/specification"
+            },
+            "hasArtifact": {
+                "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/index.html"
+            }
+        },
+        {
+            "@id": "#hasExample",
+            "@type": "ResourceDescriptor",
+            "hasRole": {
+                "@id": "http://www.w3.org/ns/dx/prof/role/example"
+            },
+            "hasArtifact": {
+                "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/"
+            }
+        },
+        {
+            "@id": "#mustConformToWorkflowROCrate",
+            "@type": "ResourceDescriptor",
+            "name": "MUST conform to Workflow RO-Crate profile 1.1",
+            "hasRole": {
+                "@id": "http://purl.org/dc/terms/conformsTo"
+            },
+            "hasArtifact": {
+                "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1"
+            }
+        }
+    ]
+}
