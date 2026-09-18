@@ -5,8 +5,9 @@ title: Workflow Testing RO-Crate
 # Workflow Testing RO-Crate
 
 * Version: 0.2-DRAFT
-* Permalink: https://w3id.org/ro/wftest/0.2-DRAFT
-* Authors: Simone Leo, Marco Enrico Piras, Luca Pireddu
+* Permalink: <https://w3id.org/ro/wftest/0.2-DRAFT>
+* Authors: [Simone Leo](https://orcid.org/0000-0001-8271-5429), [Marco Enrico Piras](https://orcid.org/0000-0002-5207-0030), [Luca Pireddu](https://orcid.org/0000-0002-4663-5613)
+* Profile Crate: [ro-crate-metadata.json](ro-crate-metadata.json) [ro-crate-preview.html](ro-crate-preview.html)
 
 Workflow Testing RO-Crate is a specialization of [Workflow RO-Crate](https://w3id.org/workflowhub/workflow-ro-crate/1.1) that supports additional metadata related to the testing of computational workflows. [LifeMonitor](https://crs4.github.io/life_monitor/) uses Workflow Testing RO-Crate as an exchange format that allows RO-Crate authors to describe test suites associated with workflows.
 
