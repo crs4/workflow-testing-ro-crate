@@ -1,0 +1,506 @@
+
+
+<html>
+<head>
+
+
+<script type="application/ld+json"> 
+  {
+  "@context": [
+    "https://w3id.org/ro/crate/1.3/context",
+    "https://w3id.org/ro/terms/test"
+  ],
+  "@graph": [
+    {
+      "@id": "ro-crate-metadata.json",
+      "@type": "CreativeWork",
+      "about": {
+        "@id": "./"
+      },
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/crate/1.3"
+      }
+    },
+    {
+      "@id": "./",
+      "@type": "Dataset",
+      "conformsTo": [
+        {
+          "@id": "https://w3id.org/ro/wftest/0.2"
+        },
+        {
+          "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1"
+        }
+      ],
+      "name": "sort-and-change-case",
+      "description": "sort lines and change text to upper case",
+      "license": "Apache-2.0",
+      "datePublished": "2026-09-11",
+      "mainEntity": {
+        "@id": "sort-and-change-case.ga"
+      },
+      "hasPart": [
+        {
+          "@id": "sort-and-change-case.ga"
+        },
+        {
+          "@id": "LICENSE"
+        },
+        {
+          "@id": "README.md"
+        },
+        {
+          "@id": "test/test1/sort-and-change-case-test.yml"
+        }
+      ],
+      "mentions": [
+        {
+          "@id": "#test1"
+        }
+      ]
+    },
+    {
+      "@id": "https://w3id.org/ro/wftest/0.2",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Workflow Testing RO-Crate",
+      "version": "0.2"
+    },
+    {
+      "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1",
+      "@type": [
+        "CreativeWork",
+        "Profile"
+      ],
+      "name": "Workflow RO-Crate",
+      "version": "1.1"
+    },
+    {
+      "@id": "sort-and-change-case.ga",
+      "@type": [
+        "File",
+        "SoftwareSourceCode",
+        "ComputationalWorkflow"
+      ],
+      "programmingLanguage": {
+        "@id": "#galaxy"
+      },
+      "name": "sort-and-change-case"
+    },
+    {
+      "@id": "LICENSE",
+      "@type": "File"
+    },
+    {
+      "@id": "README.md",
+      "@type": "File"
+    },
+    {
+      "@id": "test/test1/sort-and-change-case-test.yml",
+      "@type": [
+        "File",
+        "TestDefinition"
+      ],
+      "conformsTo": {
+        "@id": "https://w3id.org/ro/terms/test#PlanemoEngine"
+      },
+      "engineVersion": ">=0.70"
+    },
+    {
+      "@id": "#test1",
+      "name": "test1",
+      "@type": "TestSuite",
+      "mainEntity": {
+        "@id": "sort-and-change-case.ga"
+      },
+      "instance": [
+        {
+          "@id": "#test1_1"
+        }
+      ],
+      "definition": {
+        "@id": "test/test1/sort-and-change-case-test.yml"
+      }
+    },
+    {
+      "@id": "#galaxy",
+      "@type": "ComputerLanguage",
+      "name": "Galaxy",
+      "identifier": {
+        "@id": "https://galaxyproject.org/"
+      },
+      "url": {
+        "@id": "https://galaxyproject.org/"
+      },
+      "version": "26.1.2.dev0"
+    },
+    {
+      "@id": "#test1_1",
+      "name": "test1_1",
+      "@type": "TestInstance",
+      "runsOn": {
+        "@id": "https://w3id.org/ro/terms/test#JenkinsService"
+      },
+      "url": "http://example.org/jenkins",
+      "resource": "job/tests/"
+    },
+    {
+      "@id": "https://w3id.org/ro/terms/test#JenkinsService",
+      "@type": "TestService",
+      "name": "Jenkins",
+      "url": {
+        "@id": "https://www.jenkins.io"
+      }
+    },
+    {
+      "@id": "https://w3id.org/ro/terms/test#PlanemoEngine",
+      "@type": "SoftwareApplication",
+      "name": "Planemo",
+      "url": {
+        "@id": "https://github.com/galaxyproject/planemo"
+      },
+      "version": "0.70"
+    }
+  ]
+}
+</script>
+
+    
+<!-- script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script -->
+<script src="https://unpkg.com/ro-crate-html@0.1/dist/ro-crate-dynamic.min.js"></script>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<meta charset='utf-8'/>
+<style>
+
+table.table {
+  padding-bottom: 300px;
+}
+</style>
+</head>
+
+
+<body>
+
+  <nav class="navbar">
+
+    <ul class="nav navbar-nav" >
+        <li ><a href="#"><span class="glyphicon glyphicon-home dataset_name">&nbsp;sort-and-change-case</span></a></li>
+    </ul>
+
+  </nav>
+<div class="container">
+<div class="jumbotron">
+<h4 class="citation"></h4>
+<h3 class="item_name">sort-and-change-case</h3>
+
+
+<a href="./ro-crate-metadata.json">⬇️🏷️ Download all the metadata for <span class='name'>sort-and-change-case</span> in JSON-LD format</a>
+
+
+<div id="check"></div>
+
+
+</div>
+
+
+
+<div id="summary">
+<div class='all-meta'>
+            <div>
+                <h3> sort-and-change-case</h3>
+                
+                
+                
+                
+        <div id="./">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>./</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>sort-and-change-case</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>Dataset</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">description<span>&nbsp;</span><a href="http://schema.org/description">[?]</a></th>
+            <td style='text-align:left'><span>sort lines and change text to upper case</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">datePublished<span>&nbsp;</span><a href="http://schema.org/datePublished">[?]</a></th>
+            <td style='text-align:left'><span>2026-09-11</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#https%3A//w3id.org/ro/wftest/0.2">Workflow Testing RO-Crate</a></li>
+                        
+                        <li><a href="#https%3A//w3id.org/workflowhub/workflow-ro-crate/1.1">Workflow RO-Crate</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">license<span>&nbsp;</span><a href="http://schema.org/license">[?]</a></th>
+            <td style='text-align:left'><span>Apache-2.0</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
+            <td style='text-align:left'><a href="#sort-and-change-case.ga">sort-and-change-case</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#sort-and-change-case.ga">sort-and-change-case</a></li>
+                        
+                        <li><a href="#LICENSE">LICENSE</a></li>
+                        
+                        <li><a href="#README.md">README.md</a></li>
+                        
+                        <li><a href="#test/test1/sort-and-change-case-test.yml">test/test1/sort-and-change-case-test.yml</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><a href="#%23test1">test1</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">about<span>&nbsp;</span><a href="http://schema.org/about">[?]</a></th>
+            <td style='text-align:left'><a href="#ro-crate-metadata.json">ro-crate-metadata.json</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://w3id.org/ro/wftest/0.2">Go to: </a> Workflow Testing RO-Crate</h3>
+                
+                
+                
+                
+        <div id="https://w3id.org/ro/wftest/0.2">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://w3id.org/ro/wftest/0.2">https://w3id.org/ro/wftest/0.2</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Workflow Testing RO-Crate</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>CreativeWork</span></li>
+                        
+                        <li><span>Profile</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
+            <td style='text-align:left'><span>0.2</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="#./">sort-and-change-case</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="https://w3id.org/workflowhub/workflow-ro-crate/1.1">Go to: </a> Workflow RO-Crate</h3>
+                
+                
+                
+                
+        <div id="https://w3id.org/workflowhub/workflow-ro-crate/1.1">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><a href="https://w3id.org/workflowhub/workflow-ro-crate/1.1">https://w3id.org/workflowhub/workflow-ro-crate/1.1</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>Workflow RO-Crate</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>CreativeWork</span></li>
+                        
+                        <li><span>Profile</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">version<span>&nbsp;</span><a href="http://schema.org/version">[?]</a></th>
+            <td style='text-align:left'><span>1.1</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="#./">sort-and-change-case</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="sort-and-change-case.ga">⬇️ Download: </a> sort-and-change-case</h3>
+                
+                
+                
+                
+        <div id="sort-and-change-case.ga">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>sort-and-change-case.ga</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>sort-and-change-case</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>File</span></li>
+                        
+                        <li><span>SoftwareSourceCode</span></li>
+                        
+                        <li><span>ComputationalWorkflow</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">programmingLanguage<span>&nbsp;</span><a href="http://schema.org/programmingLanguage">[?]</a></th>
+            <td style='text-align:left'><a href="#%23galaxy">Galaxy</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
+            <td style='text-align:left'><ul>
+                        <li><a href="#./">sort-and-change-case</a></li>
+                        
+                        <li><a href="#%23test1">test1</a></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">sort-and-change-case</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="LICENSE">⬇️ Download: </a> LICENSE</h3>
+                
+                
+                
+                
+        <div id="LICENSE">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>LICENSE</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">sort-and-change-case</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="README.md">⬇️ Download: </a> README.md</h3>
+                
+                
+                
+                
+        <div id="README.md">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>README.md</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>File</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">sort-and-change-case</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3><a href="test/test1/sort-and-change-case-test.yml">⬇️ Download: </a> test/test1/sort-and-change-case-test.yml</h3>
+                
+                
+                
+                
+        <div id="test/test1/sort-and-change-case-test.yml">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>test/test1/sort-and-change-case-test.yml</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><ul>
+                        <li><span>File</span></li>
+                        
+                        <li><span>TestDefinition</span></li>
+                        </ul></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">conformsTo<span>&nbsp;</span><a href="http://purl.org/dc/terms/conformsTo">[?]</a></th>
+            <td style='text-align:left'><a href="#https%3A//w3id.org/ro/terms/test%23PlanemoEngine">Planemo</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">engineVersion<span>&nbsp;</span><a href="https://w3id.org/ro/terms/test#engineVersion">[?]</a></th>
+            <td style='text-align:left'><span>>=0.70</span></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">hasPart<span>&nbsp;</span><a href="http://schema.org/hasPart">[?]</a></th>
+            <td style='text-align:left'><a href="#./">sort-and-change-case</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">definition<span>&nbsp;</span><a href="https://w3id.org/ro/terms/test#definition">[?]</a></th>
+            <td style='text-align:left'><a href="#%23test1">test1</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/>
+            <div>
+                <h3> test1</h3>
+                
+                
+                
+                
+        <div id="#test1">
+            
+            <table class="table metadata table-striped" >
+                <tbody><tr>
+            <th style="text-align:left;" class="prop">@id</th>
+            <td style='text-align:left'><span>#test1</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">name<span>&nbsp;</span><a href="http://schema.org/name">[?]</a></th>
+            <td style='text-align:left'><span>test1</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">@type</th>
+            <td style='text-align:left'><span>TestSuite</span></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">mainEntity<span>&nbsp;</span><a href="http://schema.org/mainEntity">[?]</a></th>
+            <td style='text-align:left'><a href="#sort-and-change-case.ga">sort-and-change-case</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">instance<span>&nbsp;</span><a href="https://w3id.org/ro/terms/test#instance">[?]</a></th>
+            <td style='text-align:left'><a href="#%23test1_1">test1_1</a></td>
+            </tr><tr>
+            <th style="text-align:left;" class="prop">definition<span>&nbsp;</span><a href="https://w3id.org/ro/terms/test#definition">[?]</a></th>
+            <td style='text-align:left'><a href="#test/test1/sort-and-change-case-test.yml">test/test1/sort-and-change-case-test.yml</a></td>
+            </tr><tr><th colspan="2" style="text-align:center">Items that reference this one</th><tr><tr>
+            <th style="text-align:left;" class="prop">mentions<span>&nbsp;</span><a href="http://schema.org/mentions">[?]</a></th>
+            <td style='text-align:left'><a href="#./">sort-and-change-case</a></td>
+            </tr></tbody>
+            </table>
+        </div>
+            </div>
+        <hr/><br/><br/></div>
+</div>
+
+
+
+
+
+</body>
+</html>
