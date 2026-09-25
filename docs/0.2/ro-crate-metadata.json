@@ -8,7 +8,7 @@
                 "@id": "https://w3id.org/ro/crate/1.3"
             },
             "about": {
-                "@id": "https://w3id.org/ro/wftest/0.2-DRAFT"
+                "@id": "https://w3id.org/ro/wftest/0.2"
             }
         },
         {
@@ -20,11 +20,11 @@
             "name": "HTML preview of the Workflow Testing RO-Crate profile",
             "encodingFormat": "text/html",
             "about": {
-                "@id": "https://w3id.org/ro/wftest/0.2-DRAFT"
+                "@id": "https://w3id.org/ro/wftest/0.2"
             }
         },
         {
-            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT",
+            "@id": "https://w3id.org/ro/wftest/0.2",
             "@type": [
                 "Dataset",
                 "Profile"
@@ -34,10 +34,10 @@
                     "@id": "https://w3id.org/ro/crate/1.3"
                 }
             ],
-            "identifier": "https://w3id.org/ro/wftest/0.2-DRAFT",
+            "identifier": "https://w3id.org/ro/wftest/0.2",
             "name": "Workflow Testing RO-Crate profile",
             "description": "This profile is a specialization of Workflow RO-Crate that supports additional metadata related to the testing of computational workflows.",
-            "version": "0.2-DRAFT",
+            "version": "0.2",
             "datePublished": "2026-09-25",
             "license": {
                 "@id": "https://spdx.org/licenses/MIT"
@@ -55,10 +55,10 @@
             ],
             "hasPart": [
                 {
-                    "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/index.html"
+                    "@id": "https://w3id.org/ro/wftest/0.2/index.html"
                 },
                 {
-                    "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/"
+                    "@id": "https://w3id.org/ro/wftest/0.2/example/"
                 },
                 {
                     "@id": "https://w3id.org/ro/terms/test"
@@ -103,7 +103,7 @@
             "name": "Luca Pireddu"
         },
         {
-            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/index.html",
+            "@id": "https://w3id.org/ro/wftest/0.2/index.html",
             "@type": "File",
             "name": "Workflow Testing RO-Crate (HTML)",
             "encodingFormat": [
@@ -114,7 +114,7 @@
             ]
         },
         {
-            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/",
+            "@id": "https://w3id.org/ro/wftest/0.2/example/",
             "@type": "Dataset",
             "name": "Example Workflow Testing RO-Crate",
             "conformsTo": [
@@ -122,7 +122,7 @@
                     "@id": "https://w3id.org/ro/crate"
                 },
                 {
-                    "@id": "https://w3id.org/ro/wftest/0.2-DRAFT"
+                    "@id": "https://w3id.org/ro/wftest/0.2"
                 },
                 {
                     "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1"
@@ -130,10 +130,10 @@
             ],
             "subjectOf": [
                 {
-                    "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/ro-crate-metadata.json"
+                    "@id": "https://w3id.org/ro/wftest/0.2/example/ro-crate-metadata.json"
                 },
                 {
-                    "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/ro-crate-preview.html"
+                    "@id": "https://w3id.org/ro/wftest/0.2/example/ro-crate-preview.html"
                 }
             ]
         },
@@ -147,12 +147,12 @@
             "version": "1.1"
         },
         {
-            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/ro-crate-metadata.json",
+            "@id": "https://w3id.org/ro/wftest/0.2/example/ro-crate-metadata.json",
             "@type": "CreativeWork",
             "encodingFormat": "application/ld+json"
         },
         {
-            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/ro-crate-preview.html",
+            "@id": "https://w3id.org/ro/wftest/0.2/example/ro-crate-preview.html",
             "@type": "CreativeWork",
             "encodingFormat": "text/html"
         },
@@ -173,7 +173,7 @@
                 "@id": "http://www.w3.org/ns/dx/prof/role/specification"
             },
             "hasArtifact": {
-                "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/index.html"
+                "@id": "https://w3id.org/ro/wftest/0.2/index.html"
             }
         },
         {
@@ -183,7 +183,7 @@
                 "@id": "http://www.w3.org/ns/dx/prof/role/example"
             },
             "hasArtifact": {
-                "@id": "https://w3id.org/ro/wftest/0.2-DRAFT/example/"
+                "@id": "https://w3id.org/ro/wftest/0.2/example/"
             }
         },
         {

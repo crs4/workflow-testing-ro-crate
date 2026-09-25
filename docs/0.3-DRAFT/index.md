@@ -4,8 +4,8 @@ title: Workflow Testing RO-Crate
 
 # Workflow Testing RO-Crate
 
-* Version: 0.2-DRAFT
-* Permalink: <https://w3id.org/ro/wftest/0.2-DRAFT>
+* Version: 0.3-DRAFT
+* Permalink: <https://w3id.org/ro/wftest/0.3-DRAFT>
 * Authors: [Simone Leo](https://orcid.org/0000-0001-8271-5429), [Marco Enrico Piras](https://orcid.org/0000-0002-5207-0030), [Luca Pireddu](https://orcid.org/0000-0002-4663-5613)
 * Profile Crate: [ro-crate-metadata.json](ro-crate-metadata.json) [ro-crate-preview.html](ro-crate-preview.html)
 
@@ -215,7 +215,7 @@ For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `gi
             "@id": "./",
             "@type": "Dataset",
             "conformsTo": [
-                {"@id": "https://w3id.org/ro/wftest/0.2-DRAFT"},
+                {"@id": "https://w3id.org/ro/wftest/0.3-DRAFT"},
                 {"@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1"}
             ],
             "name": "sort-and-change-case",
@@ -246,10 +246,10 @@ For Travis CI builds, set `url` to `https://travis-ci.com` and `resource` to `gi
             ]
         },
         {
-            "@id": "https://w3id.org/ro/wftest/0.2-DRAFT",
+            "@id": "https://w3id.org/ro/wftest/0.3-DRAFT",
             "@type": ["CreativeWork", "Profile"],
             "name": "Workflow Testing RO-Crate",
-            "version": "0.2-DRAFT"
+            "version": "0.3-DRAFT"
         },
         {
             "@id": "https://w3id.org/workflowhub/workflow-ro-crate/1.1",
